@@ -10,11 +10,6 @@ def main(URI):
     with open("SpotifyCodeDownload.svg", 'wb') as f:
         for chunk in r.iter_content(1024): 
             f.write(chunk)
-        
-    
-    filepath = bpy.data.filepath
-    directory = os.path.dirname(filepath)
-    path_svg = os.path.join( directory , "SpotifyCodeDownload.svg")
 
     bpy.context.scene.unit_settings.scale_length = 100
 
